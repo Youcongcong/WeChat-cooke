@@ -1,0 +1,47 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/search/search",
+    "pages/sort/sort"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "菜谱大全",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#000000",
+    "borderStyle": "white",
+    "backgroundColor": "#f8f9fb",
+    "list": [{
+      "pagePath": "pages/home/home",
+      "text": "菜谱大全",
+      "iconPath": "./images/home.png",
+      "selectedIconPath": "./images/home-actived.png"
+    },
+    {
+      "pagePath": "pages/sort/sort",
+      "text": "分类",
+      "iconPath": "./images/fenlei.png",
+      "selectedIconPath": "./images/fenlei-active.png"
+    },
+    {
+      "pagePath": "pages/index/index",
+      "text": "我的",
+      "iconPath": "./images/profile.png",
+      "selectedIconPath": "./images/profile-actived.png"
+    }]
+  },
+  "debug":true,
+  "networkTimeout": {
+    "request": 20000,
+    "downloadFile": 20000
+  }
+
+}

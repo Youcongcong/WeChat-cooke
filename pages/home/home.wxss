@@ -1,0 +1,127 @@
+
+
+.slide {
+  height: 480rpx;
+    position:relative;
+}
+
+.slide swiper {
+  height: 480rpx;
+
+}
+
+.wx-swiper-dots.wx-swiper-dots-horizontal{
+    width: 100px;
+    position:absolute;
+    right:0;
+}
+.slide swiper image {
+    height: 100%;
+    width: 100%;
+}
+.hotcon{
+  background: #fff
+}
+.wid100.weui-btn:first-child{
+  margin: 15px auto
+}
+.wid100{
+  width: 96%;
+  background-color:#fff;
+  font-size: 14px;
+  opacity: 0.4
+}
+button.wid100[type=default] {
+  background-color:#fff;
+  border: 1px solid #FD9D1E
+
+}
+.hotclass{
+  background: #fff;
+  font-size: 14px;
+  height: 35px;
+  line-height: 35px;
+}
+.jin-title{
+  font-size: 14px;
+  height: 35px;
+  line-height: 35px;
+}
+.hott{
+  text-indent: 2%;
+  border-bottom: 1rpx solid #D9D9D9
+}
+.jin-title{
+  text-indent: 2%;
+}
+.hotcon .weui-grids{
+  border-top:none;
+  border-left:none;
+
+
+}
+.hotcon .weui-grids .weui-grid:nth-child(4n){
+  border-right:none 
+}
+.hotcon  .weui-grid{
+  width: 25%;
+  padding: 10px 10px
+}
+.similar-li:nth-child(odd) {
+    padding-right: 3px;
+}
+.similar-li {
+    float: left;
+    width: 50%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-bottom: 6px;
+    position: relative;
+}
+.similar-product {
+    background-color: #fff;
+    padding-bottom: 6px;
+    font-size: 0;
+}
+.similar-posre {
+    position: relative;
+}
+.similar-product .Jschangewidth {
+    width: 100%;
+    display: block;
+    transition: opacity .5s;
+    opacity: 0.4;
+}
+
+.loaded{
+   width: 100%;
+    display: block;
+    transition: opacity .5s;
+    opacity: 1 !important;
+}
+.similar-product-info {
+    height: 23px;
+    font-size: 26rpx;
+    width: 88%;
+    margin: 15rpx auto 0 auto;
+    text-align: center;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.mr{
+  margin-right: 10rpx
+}
+.similar-product .praise-info {
+    display: block;
+    padding: 0 4px;
+    position: relative;
+    top: 1px;
+    text-align: center;
+    font-size: 22rpx;
+    height: 20px;
+    color: #888888;
+}
+.similar-li:nth-child(2n) {
+    padding-left: 3px;
+}

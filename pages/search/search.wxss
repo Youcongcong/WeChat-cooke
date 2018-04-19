@@ -1,0 +1,61 @@
+.weui-search-bar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  z-index: 10
+}
+.contant-list {
+  flex: 1;
+  margin-top: 48px
+}
+
+.item-list {
+  border-bottom: 1rpx solid #d9d9d9;
+  display: flex;
+  flex-flow: row;
+  padding: 20rpx 10px;
+}
+
+.list-img {
+  width: 33%;
+  height: 90px;
+  margin-right: 20rpx;
+}
+
+.right-text {
+  flex: 1;
+  overflow: hidden
+}
+
+.tile {
+  width: 100%;
+  font-size: 40rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 34px;
+}
+
+.tile1 {
+  width: 100%;
+  font-size: 30rpx;
+  color: #737876;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 26px;
+  line-height: 26px;
+}
+
+.tile2 {
+  width: 100%;
+  font-size: 25rpx;
+  color: #737876;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 26px;
+  line-height: 26px;
+}

@@ -1,0 +1,46 @@
+<view class="page">
+  <view class='slide'>
+    <swiper indicator-dots="true" autoplay="true" interval="5000" duration="1000" indicator-active-color="#FD9D1E" indicator-color="#fff" >
+      <swiper-item wx:for="{{todayNew}}" wx:key="index">
+        <image mode='aspectFill' src="{{item.mscover}}"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view>
+    <button bindtap="bindViewTap" class="weui-btn wid100" type="default">想吃什么搜这里 如热菜</button>
+  </view>
+
+  <view class='hotcon'>
+    <view class='hotclass'>
+      <view class='hott'>热门分类</view>
+
+    </view>
+    <view class="weui-grids">
+      <block wx:for-items="{{swiData}}" wx:key="{{index}}">
+        <view  bindtap="fun" data-viewpoint-name="{{item.name}}" data-viewpoint-Uuid= "{{item.classid}}" class="weui-grid" hover-class="weui-grid_active">
+          <view class="weui-grid__label">{{item.name}}</view>
+        </view>
+      </block>
+    </view>
+
+  </view>
+  <view class='jingpin'>
+    <view class='jin-title'>精品好菜</view>
+    <view class='jin-contam'>
+      <view class='similar-li' wx:for="{{goodFood}}" wx:key="{{key}} ">
+        <view class='similar-product'>
+          <view class='similar-posre'>
+            <image lazy-load='true' class="{{arr[index]?'loaded':'Jschangewidth opa1'}}" mode="widthFix" src="{{arr[index]? item.mpic:imageDefault}}"></image>
+            <view class='similar-product-info'>{{item.title}}</view>
+            <view class='praise-info'>
+             <text>{{item.username}}</text>
+            </view>
+          </view>
+        </view>
+     
+      </view>
+      
+    </view>
+
+  </view>
+</view>

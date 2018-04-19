@@ -1,0 +1,15 @@
+<view class="page">
+  <view class='sortcon'>
+    <scroll-view class="sortcon-left" scroll-y="true">
+      <view  class="{{curNav == item.type ? 'left-in active':'left-in'}}" wx:for="{{sortData1}}"     data-id="{{item.type}}" wx:key="index" bindtap='switchRightTab'>{{item.typeName}}</view>
+
+
+    </scroll-view>
+    <scroll-view class='sortcon-right' scroll-y="true">
+      <view wx:if="{{navRightItems}}">
+        <view class='right-item' wx:for="{{navRightItems}}" data-viewpoint-name="{{item.name}}" data-viewpoint-Uuid= "{{item.id}}" bindtap="tap">{{item.name}}</view>
+      </view>
+      <view wx:else class='right-item'>暂无数据</view>
+    </scroll-view>
+  </view>
+</view>

@@ -1,0 +1,35 @@
+<view class="page">
+  <view class="weui-search-bar">
+    <view class="weui-search-bar__form">
+      <view class="weui-search-bar__box">
+        <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+        <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" bindconfirm="confirm" />
+        <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+          <icon type="clear" size="14"></icon>
+        </view>
+      </view>
+      <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+        <icon class="weui-icon-search" type="search" size="14"></icon>
+        <view class="weui-search-bar__text">搜索</view>
+      </label>
+    </view>
+    <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">
+      取消
+    </view>
+  </view>
+  
+  <scroll-view class="contant-list" scroll-y="true">
+    <view wx:if="{{listData != ''}}">
+    <view class="item-list" wx:for="{{listData}}">
+      <image class="list-img" lazy-load='true' src="{{item.cover}}"></image>
+      <view class="right-text">
+        <view class="tile">{{item.subject}}</view>
+        <view class="tile1">{{item.mainingredient}}</view>
+        <view class="tile2">{{item.viewnum}}浏览 {{item.copyright}}收藏</view>
+      </view>
+    </view>
+    </view>
+    <view wx:else style='text-align:center'>暂无数据</view>
+  </scroll-view>
+  <loading hidden="{{hiddenLoading}}">正在加载</loading>
+</view>

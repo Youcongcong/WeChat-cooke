@@ -1,0 +1,8 @@
+/**weui**/
+@import './weui.wxss';
+/**app.wxss**/
+.contanit{
+  width: 100%;
+  height: 100%;
+  background: #f4f4f4
+}
