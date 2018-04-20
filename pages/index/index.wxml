@@ -7,8 +7,30 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
-  <view class="usermotto" bindtap='openLoading'>
-    <view class="user-motto">{{motto}}</view>
+
+  <view class="kind-list">
+    <block>
+      <view class="kind-list__item">
+        
+        <view class="kind-list__item-bd kind-list__item-bd_show">
+          <view class="weui-cells weui-cells_show">
+            <block >
+              <navigator url="../location/location" class="weui-cell weui-cell_access">
+                <view class="weui-cell__bd">我的位置</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+              </navigator>
+              <view class="weui-cell weui-cell_access">
+                <view class="weui-cell__bd">GitHub地址：https://github.com/Youcongcong/WeChat-cooke</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+              </view>
+            </block>
+          </view>
+        </view>
+      </view>
+    </block>
+    <view style='width:80px;height:80px;border-radius:50%;float:right;margin:20px'>
+      <button class='share' id="kefu" open-type="contact" type="primary"  
+     hover-class="other-button-hover">客服</button>
+    </view>
   </view>
-  <button class="weui-btn mini-btn" type="warn" size="mini">按钮</button>
 </view>

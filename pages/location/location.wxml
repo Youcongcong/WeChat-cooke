@@ -1,0 +1,12 @@
+<view class="page">
+  <map longitude='{{longitude}}' show-location="true" latitude='{{latitude}}' markers="{{markers}}" class='location-map'></map>
+  <view class='location-address'>您当前的位置：{{formatted_address}}</view>
+  <view class='location-coord'>经度：{{latitude}}  纬度：{{longitude}}</view>
+  <view class='btn'>
+  
+  <button class="weui-btn" type="primary" plain="true" loading='{{loading}}' bindtap='refreshLocation'>重新定位</button>
+  <button class='share' id="shareBtn" open-type="share" type="primary"  
+     hover-class="other-button-hover">分享给好友</button>
+  </view>
+  
+</view>

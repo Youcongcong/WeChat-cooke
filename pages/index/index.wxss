@@ -19,3 +19,15 @@
 .usermotto {
   margin-top: 200px;
 }
+.kind-list{
+  margin-top: 60rpx
+}
+#kefu{
+font-size:13px;
+width:100%;
+height:100%;
+line-height:80px;
+border-radius:100%;
+
+background: #FD9D1E
+}
