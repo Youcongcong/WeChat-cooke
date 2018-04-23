@@ -20,7 +20,7 @@
   
   <scroll-view class="contant-list" scroll-y="true">
     <view wx:if="{{listData != ''}}">
-    <view class="item-list" wx:for="{{listData}}">
+    <view class="item-list" wx:for="{{listData}}" data-viewpoint-item="{{item}}" bindtap='todetails'>
       <image class="list-img" lazy-load='true' src="{{item.cover}}"></image>
       <view class="right-text">
         <view class="tile">{{item.subject}}</view>

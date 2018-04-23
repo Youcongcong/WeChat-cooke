@@ -19,6 +19,15 @@ Page({
       inputShowed: false
     });
   },
+  todetails: function (event) {
+    const item = event.currentTarget.dataset.viewpointItem;
+    const type = typeof (item);
+    console.log(item, '22222')
+    //if (type == 'object')
+    wx.navigateTo({
+      url: '../details/details?item=' + JSON.stringify(item)
+    })
+  },
   clearInput: function () {
     this.setData({
       inputVal: ""

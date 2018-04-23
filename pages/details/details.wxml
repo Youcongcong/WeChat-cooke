@@ -1,0 +1,8 @@
+<view class="page">
+  <image lazy-load='true' class="img"  src="{{imgUrl}}"></image>
+  <view>
+  <view class='f1'>{{message}}</view>
+  <view class='f1'>材料：{{mainingredient}}</view>
+  
+  </view>
+</view>

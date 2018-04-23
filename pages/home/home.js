@@ -44,12 +44,22 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
+  todetails: function (event){
+    const item = event.currentTarget.dataset.viewpointItem;
+    const titem = event.currentTarget.dataset.viewpointTitem;
+    
+    const type = typeof(item);
+    console.log(item,'22222')
+    //if (type == 'object')
+    wx.navigateTo({
+      url: '../details/details?item=' + JSON.stringify(item) + '&titem=' + JSON.stringify(titem)
+    })
+  },
   onLoad: function (options) {
     var that = this;
 
     app.foods.find('recipe', 'getMoreDiffStateRecipeList', 0, 'new', 2).then(data => {
         //轮播数据
-        console.log(data)
         this.setData({
           todayNew: data
             .data
@@ -70,7 +80,6 @@ Page({
 
   },
   bindViewTap: function () {
-    console.log(11)
     wx.navigateTo({
       url: '../search/search?type="热菜"&classId=102' })
   },
@@ -85,7 +94,6 @@ Page({
   getRect: function () {
     var that = this;
     wx.createSelectorQuery().select('.similar-li').boundingClientRect(function (rect) {
-      console.log(rect)
       that.setData({ itemHeight: rect.height })
       that.init(rect.height)
 
