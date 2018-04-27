@@ -1,0 +1,23 @@
+<!--start.wxml-->
+<view class="container">
+  <view class="remind-box" wx:if="{{remind}}">
+    <image class="remind-img" src="/images/loading.gif"></image>
+  </view>
+  <block wx:else>
+    <image class="title" src="/images/title8.png"></image>
+    <view class="content">
+      <view class="hd" style="transform:rotateZ({{angle}}deg);">
+        <image class="logo" src="{{userInfo.avatarUrl}}"></image>
+        <image class="wave" src="/images/wave.png" mode="aspectFill"></image>
+        <image class="wave wave-bg" src="/images/wave.png" mode="aspectFill"></image>
+      </view>
+      <view class="bd">
+         
+        <view class="confirm-btn" bindtap='goToIndex'>
+          <text >进入菜谱</text>
+        </view>
+        
+      </view>
+    </view>
+  </block>
+</view>

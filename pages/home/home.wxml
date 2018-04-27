@@ -30,7 +30,7 @@
       <view class='similar-li' wx:for="{{goodFood}}" wx:key="{{key}} " >
         <view class='similar-product' data-viewpoint-item="{{item}}" bindtap='todetails'>
           <view class='similar-posre'>
-            <image lazy-load='true' class="{{arr[index]?'loaded':'Jschangewidth opa1'}}" mode="widthFix" src="{{arr[index]? item.mpic:imageDefault}}"></image>
+            <image lazy-load='true' class="{{arr[index]?'loaded':'Jschangewidth opa1'}}" mode="widthFix" src="{{arr[index]? item.mscover:imageDefault}}"></image>
             <view class='similar-product-info'>{{item.title}}</view>
             <view class='praise-info'>
              <text>{{item.username}}</text>

@@ -59,24 +59,26 @@ Page({
     var that = this;
 
     app.foods.find('recipe', 'getMoreDiffStateRecipeList', 0, 'new', 2).then(data => {
+      var that = this;
+      var datagood = data.data.slice(9, 29);
+      for (let i = 0; i < datagood.length; i++) {
+        //图片显示默认样张
+        that.data.arr.push(false)
+      }
         //轮播数据
         this.setData({
           todayNew: data
             .data
-            .slice(9, 15),
-          loading: false
-        })
-      })
-    app.foods.find().then(data => {
-        for (let i = 0; i < data.data.length; i++) {
-          //图片显示默认样张
-          that.data.arr.push(false)
-        }
-        this.setData({ goodFood: data.data, loading: false })
+            .slice(1, 8),
+          loading: false,
+          goodFood: datagood
+        });
         setTimeout(() => {
           this.getRect()
         }, 100)
-    })
+      })
+    
+    
 
   },
   bindViewTap: function () {
