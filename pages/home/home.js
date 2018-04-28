@@ -56,8 +56,11 @@ Page({
     })
   },
   onLoad: function (options) {
+    this.getData()
+  },
+  getData(){
     var that = this;
-
+    wx.showNavigationBarLoading()
     app.foods.find('recipe', 'getMoreDiffStateRecipeList', 0, 'new', 2).then(data => {
       var that = this;
       var datagood = data.data.slice(9, 29);
@@ -65,21 +68,20 @@ Page({
         //图片显示默认样张
         that.data.arr.push(false)
       }
-        //轮播数据
-        this.setData({
-          todayNew: data
-            .data
-            .slice(1, 8),
-          loading: false,
-          goodFood: datagood
-        });
-        setTimeout(() => {
-          this.getRect()
-        }, 100)
-      })
-    
-    
-
+      //轮播数据
+      this.setData({
+        todayNew: data
+          .data
+          .slice(1, 8),
+        loading: false,
+        goodFood: datagood
+      });
+      setTimeout(() => {
+        this.getRect()
+      }, 100)
+      wx.stopPullDownRefresh(); 
+      wx.hideNavigationBarLoading()
+    })
   },
   bindViewTap: function () {
     wx.navigateTo({
@@ -150,7 +152,9 @@ Page({
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () { },
+  onPullDownRefresh: function () {
+    this.getData()
+  },
 
   /**
    * 页面上拉触底事件的处理函数
